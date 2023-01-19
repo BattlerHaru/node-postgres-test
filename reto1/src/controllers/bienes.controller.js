@@ -159,7 +159,7 @@ const BienesGetMultiIDs = async (req = request, res = response) => {
 
   try {
     // Read database
-    let articleList = await Bienes.findAll({ id: ids });
+    let articleList = await Bienes.findAll({ where: { id: ids } });
 
     res.json({
       ok: true,
