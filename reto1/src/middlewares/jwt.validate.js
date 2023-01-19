@@ -20,7 +20,7 @@ const jwtValidate = async (req = request, res = response, next) => {
 
     if (!user) {
       return res.status(401).json({
-        msg: "Token no válido.1",
+        msg: "Token no válido.",
       });
     }
 
@@ -30,7 +30,7 @@ const jwtValidate = async (req = request, res = response, next) => {
   } catch (error) {
     console.log(error);
     return res.status(401).json({
-      msg: "Token no válido.3",
+      msg: "Token no válido.",
     });
   }
 };
